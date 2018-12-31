@@ -83,3 +83,78 @@ exports["Can compute highest grade"] = function(test) {
 
     test.done();
 }
+
+exports["Can compute letter grade of A"] = function(test) {
+    // Arrange
+    gradeBook.addGrade(100);
+    gradeBook.addGrade(90);
+    let expected = 'A';
+
+    // Act
+    let actual = gradeBook.getLetterGrade();
+
+    // Assert
+    test.equals(expected, actual);
+
+    test.done();
+}
+
+exports["Can compute letter grade of B"] = function(test) {
+    // Arrange
+    gradeBook.addGrade(82);
+    gradeBook.addGrade(86);
+    let expected = 'B';
+
+    // Act
+    let actual = gradeBook.getLetterGrade();
+
+    // Assert
+    test.equals(expected, actual);
+
+    test.done();
+}
+
+exports["Can compute letter grade of C"] = function(test) {
+    // Arrange
+    gradeBook.addGrade(74);
+    gradeBook.addGrade(75);
+    let expected = 'C';
+
+    // Act
+    let actual = gradeBook.getLetterGrade();
+
+    // Assert
+    test.equals(expected, actual);
+
+    test.done();
+}
+
+exports["Can compute letter grade of D"] = function(test) {
+    // Arrange
+    gradeBook.addGrade(65);
+    gradeBook.addGrade(68);
+    let expected = 'D';
+
+    // Act
+    let actual = gradeBook.getLetterGrade();
+
+    // Assert
+    test.equals(expected, actual);
+
+    test.done();
+}
+
+exports["Can compute letter grade of F"] = function(test) {
+    // Arrange
+    gradeBook.addGrade(42);
+    gradeBook.addGrade(57);
+    let expected = 'F';
+
+    // Act
+    let actual = gradeBook.getLetterGrade();
+
+    // Assert
+    test.equals(expected, actual);
+
+    test.done();
+}
